@@ -37,6 +37,7 @@ class LoadFactOperator(BaseOperator):
             additional_statement = f"""DELETE FROM {self.target_table};"""
         else:
             additional_statement =""
+
         database_hook.run(f"""
         BEGIN;
         
